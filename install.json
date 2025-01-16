@@ -1,8 +1,9 @@
 {
   "requires": [
-    { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" },
     { "type": "conda", "name": "python=3.9.20" },
-    { "type": "conda", "name": "cuda=11.8" }
+    { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" },
+    { "type": "pip", "name": "torch", "args": "==1.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html" },
+    { "type": "pip", "name": "torchvision", "args": "==0.11.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html" }
   ],
   "run": [
     {
