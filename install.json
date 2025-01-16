@@ -1,0 +1,58 @@
+{
+  "requires": [
+    { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" },
+    { "type": "conda", "name": "python=3.9.20" },
+    { "type": "conda", "name": "cuda=11.8" }
+  ],
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "git clone https://github.com/CyberAgentAILab/TANGO.git && cd TANGO"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "git clone https://github.com/justinjohn0306/Wav2Lip.git"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "git clone https://github.com/dajes/frame-interpolation-pytorch.git"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "pip install -r pre-requirements.txt"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "pip install -r requirements.txt"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "python app.py"
+      }
+    },
+    {
+      "method": "input",
+      "params": {
+        "title": "Installation réussie",
+        "description": "Retournez au tableau de bord et lancez l'application !"
+      }
+    },
+    {
+      "method": "browser.open",
+      "params": {
+        "uri": "/?selected=TANGO"
+      }
+    }
+  ]
+}
