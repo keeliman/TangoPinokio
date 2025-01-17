@@ -1,6 +1,6 @@
 {
   "requires": [
-    { "type": "conda", "name": "python=3.9.20" },
+    { "type": "conda", "name": "python" },
     { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" }
   ],
   "run": [
