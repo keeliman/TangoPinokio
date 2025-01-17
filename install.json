@@ -4,53 +4,51 @@
     { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" }
   ],
   "run": [
-    {
+  {
       "method": "shell.run",
       "params": {
-        "message": "git clone https://github.com/CyberAgentAILab/TANGO.git && cd TANGO"
-      }
-    },
-    {
-      "method": "shell.run",
-      "params": {
-        "message": "git clone https://github.com/justinjohn0306/Wav2Lip.git"
+        "message": "git clone https://github.com/CyberAgentAILab/TANGO.git"
       }
     },
     {
       "method": "shell.run",
       "params": {
-        "message": "git clone https://github.com/dajes/frame-interpolation-pytorch.git"
+        "message": "git clone https://github.com/justinjohn0306/Wav2Lip.git",
+        "cwd": "TANGO"
       }
     },
     {
       "method": "shell.run",
       "params": {
-        "message": "pip install -r pre-requirements.txt"
+        "message": "git clone https://github.com/dajes/frame-interpolation-pytorch.git",
+        "cwd": "TANGO"
+      }
+    },
+    {
+      "method": "conda.create",
+      "params": {
+        "name": "tango",
+        "python": "3.9.20"
+      }
+    },
+    {
+      "method": "conda.activate",
+      "params": {
+        "name": "tango"
       }
     },
     {
       "method": "shell.run",
       "params": {
-        "message": "pip install -r requirements.txt"
+        "message": "pip install -r pre-requirements.txt",
+        "cwd": "TANGO"
       }
     },
     {
       "method": "shell.run",
       "params": {
-        "message": "python app.py"
-      }
-    },
-    {
-      "method": "input",
-      "params": {
-        "title": "Installation réussie",
-        "description": "Retournez au tableau de bord et lancez l'application !"
-      }
-    },
-    {
-      "method": "browser.open",
-      "params": {
-        "uri": "/?selected=TANGO"
+        "message": "pip install -r requirements.txt",
+        "cwd": "TANGO"
       }
     }
   ]
