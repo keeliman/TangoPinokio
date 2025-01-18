@@ -1,10 +1,6 @@
 {
-  "requires": [
-    { "type": "conda", "name": "python" },
-    { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" }
-  ],
   "run": [
-  {
+    {
       "method": "shell.run",
       "params": {
         "message": "git clone https://github.com/CyberAgentAILab/TANGO.git"
