@@ -21,29 +21,15 @@
       }
     },
     {
-      "method": "conda.create",
+      "method": "shell.run",
       "params": {
-        "name": "tango",
-        "python": "3.9.20"
-      }
-    },
-    {
-      "method": "conda.activate",
-      "params": {
-        "name": "tango"
+        "message": "conda create -n tango python=3.9.20 -y"
       }
     },
     {
       "method": "shell.run",
       "params": {
-        "message": "pip install -r pre-requirements.txt",
-        "cwd": "TANGO"
-      }
-    },
-    {
-      "method": "shell.run",
-      "params": {
-        "message": "pip install -r requirements.txt",
+        "message": "conda activate tango && pip install -r pre-requirements.txt && pip install -r requirements.txt",
         "cwd": "TANGO"
       }
     }
