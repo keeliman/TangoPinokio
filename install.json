@@ -7,16 +7,17 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": {
-        "windows": "git clone https://github.com/justinjohn0306/Wav2Lip.git && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
-      }
+      "message": "git clone https://github.com/justinjohn0306/Wav2Lip.git && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
     }
   }, {
     "method": "shell.run",
     "params": {
-      "message": {
-        "windows": "conda create -n tango python=3.9.20 -y && conda activate tango && pip install -r pre-requirements.txt && pip install -r requirements.txt"
-      }
+      "message": "conda create -p ./env python=3.9.20 -y"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "conda init cmd.exe && conda activate ./env && pip install -r pre-requirements.txt && pip install -r requirements.txt"
     }
   }, {
     "method": "notify",

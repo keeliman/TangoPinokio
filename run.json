@@ -2,11 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": {
-        "windows": "conda activate tango_env && python run_tango.py",
-        "linux": "conda activate tango_env && python run_tango.py",
-        "darwin": "conda activate tango_env && python run_tango.py"
-      }
+      "message": "conda run -p ./env python run_tango.py"
     }
   }]
 } 
