@@ -7,12 +7,22 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": "echo @echo off > setup.bat && echo cd TANGO >> setup.bat && echo git clone https://github.com/justinjohn0306/Wav2Lip.git >> setup.bat && echo git clone https://github.com/dajes/frame-interpolation-pytorch.git >> setup.bat && echo conda create -p ./env python=3.9.20 -y >> setup.bat && echo conda run -p ./env pip install -r pre-requirements.txt >> setup.bat && echo conda run -p ./env pip install -r requirements.txt >> setup.bat"
+      "message": "cd TANGO && git clone https://github.com/justinjohn0306/Wav2Lip.git && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
     }
   }, {
     "method": "shell.run",
     "params": {
-      "message": "cmd /c setup.bat"
+      "message": "cd TANGO && conda create -p ./env python=3.9.20 -y"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "cd TANGO && conda activate ./env && pip install -r pre-requirements.txt"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "cd TANGO && conda activate ./env && pip install -r requirements.txt"
     }
   }, {
     "method": "notify",
