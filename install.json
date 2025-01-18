@@ -8,12 +8,12 @@
     "method": "fs.write",
     "params": {
       "path": "setup.bat",
-      "content": "@echo off\ncd TANGO\ngit clone https://github.com/justinjohn0306/Wav2Lip.git\ngit clone https://github.com/dajes/frame-interpolation-pytorch.git\nconda create -p ./env python=3.9.20 -y\nconda run -p ./env pip install -r pre-requirements.txt\nconda run -p ./env pip install -r requirements.txt\n"
+      "content": "@echo off\r\ncd TANGO\r\ngit clone https://github.com/justinjohn0306/Wav2Lip.git\r\ngit clone https://github.com/dajes/frame-interpolation-pytorch.git\r\nconda create -p ./env python=3.9.20 -y\r\nconda run -p ./env pip install -r pre-requirements.txt\r\nconda run -p ./env pip install -r requirements.txt"
     }
   }, {
     "method": "shell.run",
     "params": {
-      "message": "cmd /c .\\setup.bat"
+      "message": "cmd /c setup.bat"
     }
   }, {
     "method": "notify",
