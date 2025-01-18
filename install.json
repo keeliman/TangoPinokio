@@ -9,15 +9,13 @@
     {
       "method": "shell.run",
       "params": {
-        "message": "git clone https://github.com/justinjohn0306/Wav2Lip.git",
-        "cwd": "TANGO"
+        "message": "cd TANGO && git clone https://github.com/justinjohn0306/Wav2Lip.git"
       }
     },
     {
       "method": "shell.run",
       "params": {
-        "message": "git clone https://github.com/dajes/frame-interpolation-pytorch.git",
-        "cwd": "TANGO"
+        "message": "cd TANGO && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
       }
     },
     {
@@ -29,8 +27,7 @@
     {
       "method": "shell.run",
       "params": {
-        "message": "conda activate tango && pip install -r pre-requirements.txt && pip install -r requirements.txt",
-        "cwd": "TANGO"
+        "message": "cd TANGO && conda activate tango && pip install -r pre-requirements.txt && pip install -r requirements.txt"
       }
     }
   ]
