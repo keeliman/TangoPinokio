@@ -1,0 +1,13 @@
+{
+  "title": "TANGO AI",
+  "description": "TANGO - Task-oriented AgeNt with GPT-4 for Online task solving",
+  "version": "3.2",
+  "menu": [{
+    "html": "<i class=\"fa-solid fa-download\"></i> Install TANGO",
+    "href": "install.json"
+  }, {
+    "html": "<i class=\"fa-solid fa-play\"></i> Run TANGO",
+    "href": "run.json"
+  }],
+  "repository": "https://github.com/CyberAgentAILab/TANGO"
+} 

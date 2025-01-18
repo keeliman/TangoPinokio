@@ -1,0 +1,10 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "message": {
+      "windows": "venv\\Scripts\\activate && python run_tango.py",
+      "linux": "source venv/bin/activate && python run_tango.py",
+      "darwin": "source venv/bin/activate && python run_tango.py"
+    }
+  }]
+} 

@@ -1,0 +1,19 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "message": [
+      "git clone https://github.com/CyberAgentAILab/TANGO.git .",
+      "python -m venv venv"
+    ]
+  }, {
+    "method": "shell.run",
+    "message": {
+      "windows": "venv\\Scripts\\activate && pip install -r requirements.txt",
+      "linux": "source venv/bin/activate && pip install -r requirements.txt",
+      "darwin": "source venv/bin/activate && pip install -r requirements.txt"
+    }
+  }, {
+    "method": "notify",
+    "html": "TANGO installation completed! Please configure your OpenAI API key in config.py before running."
+  }]
+} 
