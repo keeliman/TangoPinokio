@@ -8,15 +8,20 @@
     "method": "shell.run",
     "params": {
       "message": {
-        "windows": "conda create -n tango_env python=3.9 -y && conda activate tango_env && pip install -r requirements.txt",
-        "linux": "conda create -n tango_env python=3.9 -y && conda activate tango_env && pip install -r requirements.txt",
-        "darwin": "conda create -n tango_env python=3.9 -y && conda activate tango_env && pip install -r requirements.txt"
+        "windows": "git clone https://github.com/justinjohn0306/Wav2Lip.git && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
+      }
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": {
+        "windows": "conda create -n tango python=3.9.20 -y && conda activate tango && pip install -r pre-requirements.txt && pip install -r requirements.txt"
       }
     }
   }, {
     "method": "notify",
     "params": {
-      "html": "TANGO installation completed! Please configure your OpenAI API key in config.py before running."
+      "html": "TANGO installation completed! Note: First run will download necessary checkpoints (~35GB)"
     }
   }]
 } 
