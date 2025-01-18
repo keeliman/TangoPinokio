@@ -2,26 +2,20 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "venv": true,
-      "message": [
-        "git clone https://github.com/CyberAgentAILab/TANGO.git .",
-        "python -m venv venv"
-      ]
+      "message": "git clone https://github.com/CyberAgentAILab/TANGO.git ."
     }
   }, {
     "method": "shell.run",
     "params": {
-      "venv": true,
-      "platform": {
-        "windows": {
-          "message": ".\\venv\\Scripts\\activate && pip install -r requirements.txt"
-        },
-        "linux": {
-          "message": "source venv/bin/activate && pip install -r requirements.txt"
-        },
-        "darwin": {
-          "message": "source venv/bin/activate && pip install -r requirements.txt"
-        }
+      "message": "python -m venv venv"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": {
+        "windows": ".\\venv\\Scripts\\pip install -r requirements.txt",
+        "linux": "./venv/bin/pip install -r requirements.txt",
+        "darwin": "./venv/bin/pip install -r requirements.txt"
       }
     }
   }, {

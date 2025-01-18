@@ -2,17 +2,10 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "venv": true,
-      "platform": {
-        "windows": {
-          "message": ".\\venv\\Scripts\\activate && python run_tango.py"
-        },
-        "linux": {
-          "message": "source venv/bin/activate && python run_tango.py"
-        },
-        "darwin": {
-          "message": "source venv/bin/activate && python run_tango.py"
-        }
+      "message": {
+        "windows": ".\\venv\\Scripts\\python run_tango.py",
+        "linux": "./venv/bin/python run_tango.py",
+        "darwin": "./venv/bin/python run_tango.py"
       }
     }
   }]
