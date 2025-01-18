@@ -7,15 +7,10 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": "python -m venv venv"
-    }
-  }, {
-    "method": "shell.run",
-    "params": {
       "message": {
-        "windows": ".\\venv\\Scripts\\pip install -r requirements.txt",
-        "linux": "./venv/bin/pip install -r requirements.txt",
-        "darwin": "./venv/bin/pip install -r requirements.txt"
+        "windows": "conda create -n tango_env python=3.9 -y && conda activate tango_env && pip install -r requirements.txt",
+        "linux": "conda create -n tango_env python=3.9 -y && conda activate tango_env && pip install -r requirements.txt",
+        "darwin": "conda create -n tango_env python=3.9 -y && conda activate tango_env && pip install -r requirements.txt"
       }
     }
   }, {

@@ -3,9 +3,9 @@
     "method": "shell.run",
     "params": {
       "message": {
-        "windows": ".\\venv\\Scripts\\python run_tango.py",
-        "linux": "./venv/bin/python run_tango.py",
-        "darwin": "./venv/bin/python run_tango.py"
+        "windows": "conda activate tango_env && python run_tango.py",
+        "linux": "conda activate tango_env && python run_tango.py",
+        "darwin": "conda activate tango_env && python run_tango.py"
       }
     }
   }]
