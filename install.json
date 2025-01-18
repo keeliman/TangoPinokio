@@ -21,7 +21,7 @@
     {
       "method": "shell.run",
       "params": {
-        "message": "conda create -n tango python=3.9.20 -y"
+        "message": "conda create -n tango python -y"
       }
     },
     {
