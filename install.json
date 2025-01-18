@@ -5,10 +5,9 @@
       "message": "git clone https://github.com/CyberAgentAILab/TANGO.git"
     }
   }, {
-    "method": "fs.write",
+    "method": "shell.run",
     "params": {
-      "path": "setup.bat",
-      "content": "@echo off\r\ncd TANGO\r\ngit clone https://github.com/justinjohn0306/Wav2Lip.git\r\ngit clone https://github.com/dajes/frame-interpolation-pytorch.git\r\nconda create -p ./env python=3.9.20 -y\r\nconda run -p ./env pip install -r pre-requirements.txt\r\nconda run -p ./env pip install -r requirements.txt"
+      "message": "echo @echo off > setup.bat && echo cd TANGO >> setup.bat && echo git clone https://github.com/justinjohn0306/Wav2Lip.git >> setup.bat && echo git clone https://github.com/dajes/frame-interpolation-pytorch.git >> setup.bat && echo conda create -p ./env python=3.9.20 -y >> setup.bat && echo conda run -p ./env pip install -r pre-requirements.txt >> setup.bat && echo conda run -p ./env pip install -r requirements.txt >> setup.bat"
     }
   }, {
     "method": "shell.run",
