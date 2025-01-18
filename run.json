@@ -2,7 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "conda run -p ./env python run_tango.py"
+      "message": "cd TANGO && conda run -p ./env python run_tango.py"
     }
   }]
 } 

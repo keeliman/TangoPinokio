@@ -2,22 +2,22 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/CyberAgentAILab/TANGO.git ."
+      "message": "git clone https://github.com/CyberAgentAILab/TANGO.git"
     }
   }, {
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/justinjohn0306/Wav2Lip.git && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
+      "message": "cd TANGO && git clone https://github.com/justinjohn0306/Wav2Lip.git && git clone https://github.com/dajes/frame-interpolation-pytorch.git"
     }
   }, {
     "method": "shell.run",
     "params": {
-      "message": "conda create -p ./env python=3.9.20 -y"
+      "message": "cd TANGO && conda create -p ./env python=3.9.20 -y"
     }
   }, {
     "method": "shell.run",
     "params": {
-      "message": "conda init cmd.exe && conda activate ./env && pip install -r pre-requirements.txt && pip install -r requirements.txt"
+      "message": "cd TANGO && conda init cmd.exe && conda activate ./env && pip install -r pre-requirements.txt && pip install -r requirements.txt"
     }
   }, {
     "method": "notify",
